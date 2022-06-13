@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="2005" viewBox="0 0 76 2005">
+  <defs>
+    <filter id="타원_6" x="0" y="732" width="76" height="76" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#ffa631" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_196" data-name="그룹 196" transform="translate(-314 -5192)">
+    <circle id="타원_2" data-name="타원 2" cx="8" cy="8" r="8" transform="translate(344 5192)" fill="#ff6594"/>
+    <rect id="사각형_55" data-name="사각형 55" width="2" height="231" transform="translate(351 5208)" fill="#f8f8f8"/>
+    <circle id="타원_3" data-name="타원 3" cx="8" cy="8" r="8" transform="translate(344 5439)" fill="#ff6594"/>
+    <rect id="사각형_56" data-name="사각형 56" width="2" height="431" transform="translate(351 5455)" fill="#f8f8f8"/>
+    <circle id="타원_4" data-name="타원 4" cx="8" cy="8" r="8" transform="translate(344 5886)" fill="#ff6594"/>
+    <rect id="사각형_57" data-name="사각형 57" width="2" height="823" transform="translate(351 5902)" fill="#f8f8f8"/>
+    <circle id="타원_5" data-name="타원 5" cx="8" cy="8" r="8" transform="translate(344 6725)" fill="#ff6594"/>
+    <rect id="사각형_58" data-name="사각형 58" width="2" height="456" transform="translate(351 6741)" fill="#f8f8f8"/>
+    <circle id="타원_7" data-name="타원 7" cx="6" cy="6" r="6" transform="translate(346 5262)" fill="#f8f8f8"/>
+    <circle id="타원_8" data-name="타원 8" cx="6" cy="6" r="6" transform="translate(346 5509)" fill="#f8f8f8"/>
+    <circle id="타원_9" data-name="타원 9" cx="6" cy="6" r="6" transform="translate(346 5697)" fill="#f8f8f8"/>
+    <circle id="타원_10" data-name="타원 10" cx="6" cy="6" r="6" transform="translate(346 6132)" fill="#f8f8f8"/>
+    <circle id="타원_11" data-name="타원 11" cx="6" cy="6" r="6" transform="translate(346 6320)" fill="#f8f8f8"/>
+    <circle id="타원_13" data-name="타원 13" cx="6" cy="6" r="6" transform="translate(346 6496)" fill="#f8f8f8"/>
+    <circle id="타원_12" data-name="타원 12" cx="6" cy="6" r="6" transform="translate(346 6795)" fill="#f8f8f8"/>
+    <circle id="타원_14" data-name="타원 14" cx="6" cy="6" r="6" transform="translate(346 6983)" fill="#f8f8f8"/>
+    <circle id="타원_15" data-name="타원 15" cx="6" cy="6" r="6" transform="translate(346 7139)" fill="#f8f8f8"/>
+    <g transform="matrix(1, 0, 0, 1, 314, 5192)" filter="url(#타원_6)">
+      <circle id="타원_6-2" data-name="타원 6" cx="8" cy="8" r="8" transform="translate(30 762)" fill="#ff6594"/>
+    </g>
+  </g>
+</svg>

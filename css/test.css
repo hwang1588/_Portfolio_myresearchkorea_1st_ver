@@ -1,0 +1,231 @@
+.test_toggle {
+  background-color: #000000 !important
+}
+
+.test_active {
+  background-color: red !important
+}
+
+.switch.on {
+  background-color: red !important
+}
+
+.switch.off {
+  background-color: black !important
+}
+
+
+.pg-wrapper {
+  padding-right: 0px !important;
+}
+
+.flex-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ee6c4d;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+}
+
+
+/*바디 스크롤바 안보이게    */
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*gridsystem1:s*/
+.g_wrapper {
+  display: grid;
+  grid-template-areas: "one_one one_two one_three"
+    "two_one two_two two_three"
+    "three_one three_two three_three";
+  grid-template-columns: auto 1280px auto;
+  grid-template-rows: auto;
+  /*내용의 크기에 맞춰짐*/
+  gap: 1rem;
+}
+
+.g_1x_1y_area {
+  grid-area: one_one;
+  background-color: red;
+  color: white;
+}
+
+.g_1x_2y_area {
+  grid-area: one_two;
+  background-color: blue;
+  color: white;
+}
+
+.g_1x_3y_area {
+  grid-area: one_three;
+  background-color: green;
+  color: white;
+}
+
+.g_2x_1y_area {
+  grid-area: two_one;
+  background-color: red;
+  color: white;
+}
+
+.g_2x_2y_area {
+  grid-area: two_two;
+  background-color: blue;
+  color: white;
+}
+
+.g_2x_3y_area {
+  grid-area: two_three;
+  background-color: green;
+  color: white;
+}
+
+.g_3x_1y_area {
+  grid-area: three_one;
+  background-color: red;
+  color: white;
+}
+
+.g_3x_2y_area {
+  grid-area: three_two;
+  background-color: blue;
+  color: white;
+}
+
+.g_3x_3y_area {
+  grid-area: three_three;
+  background-color: green;
+  color: white;
+}
+
+/*gridsystem1:e*/
+
+/*gridsystem2:s*/
+.g_wrapper_2 {
+  display: grid;
+  grid-template-areas: "auto_start main_center auto_end"
+    "auto_start main_center auto_end"
+    "auto_start main_center auto_end";
+  grid-template-columns: auto 1280px auto;
+  grid-template-rows: auto;
+  /*내용의 크기에 맞춰짐*/
+  gap: 1rem;
+}
+
+.g_auto_s_area {
+  grid-area: auto_start;
+  background-color: red;
+  color: white;
+}
+
+.g_center_area {
+  grid-area: main_center;
+  background-color: blue;
+  color: white;
+}
+
+.g_auto_e_area {
+  grid-area: auto_end;
+  background-color: green;
+  color: white;
+}
+
+/*gridsystem2:e*/
+
+.pg-horizontal {
+  overflow-y: hidden;
+}
+
+
+/*swiper 기본설정*/
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+/*
+.swiper {
+  width: 100%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+*/
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper1 {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .mySwiper2 {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper2 .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 1;
+    }
+
+    .mySwiper2 .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .mySwiper3 {
+      height: inherit;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }

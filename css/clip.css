@@ -1,0 +1,66 @@
+.effect {
+	width: 100%;
+/*	background-size: contain;*/
+	height: 500px;
+}
+
+.effect h1 {
+	font-weight: 900;
+	font-size: 16vw;
+	text-align: center;
+	color: #222;
+/*배경색상으로 노출할때 */
+  background: radial-gradient(
+     at center, #3498db, #9b59b6
+    );
+/*사진으로 노출할때*/
+	background: url(../img/img_gwp_bg.svg) repeat fixed;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	animation: bp 3s infinite alternate;
+	padding-top: 80px;
+}
+
+.effect .text {
+	text-align: center;
+	margin: 0;
+	font-size: 1.5vw;
+}
+
+/*
+
+@keyframes bp {
+	100% {
+		background-position: 0% 552px;
+	}
+
+	0% {
+		background-position: 0% 0px;
+	}
+}
+*/
+
+
+/*
+@media all and (max-width: 1400px) {
+  .effect h1 {
+	  font-size: 18vw;
+	  margin-left: 0;
+  }
+}
+*/
+
+@media all and (max-width: 1400px) {
+	.effect {
+		height: auto;
+	}
+
+	.effect h1 {
+		font-size: 24vw;
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 0px;
+	}
+}

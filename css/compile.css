@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* 변수를 할당 */
+.father {
+  background-color: blueviolet;
+}
+
+.father .baby {
+  background-color: aqua;
+}
+
+.father .baby.dog {
+  background-color: white;
+}
+
+.father .baby .dog2 {
+  background-color: #0ce900;
+}
+
+.father .baby-guess {
+  background-color: #e96900;
+}
+
+.father .baby-guess2 {
+  background-color: red;
+}
+
+/* 사용 - @include */
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: orange;
+}
+
+h1::after {
+  content: "!!";
+}
+
+h1 span.icon {
+  background: url("/images/icon.png");
+}
+
+div {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: orange;
+}
+
+div::after {
+  content: "!!";
+}
+
+div span.icon {
+  background: url("/images/icon.png");
+}
+/*# sourceMappingURL=compile.css.map */

@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css");
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");/*aos css*/
+
+@import "font.css";/*폰트*/
+@import "common.css";/*공통(전체)스타일시트*/
+@import "clip.css";/*background-clip용 스타일시트*/
+@import "snow.css";/*background-clip용 스타일시트*/
+
+/*구형animate.css= .bounceInUp*/
+@import "animate.css";/*애니메이션css*/
+/*신형animate.css= .animate__animated .animate__bounceInUp*/
+/*@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");*/
+
+@import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");/*슬릭슬라이더 css*/
+@import "slick-theme.css";/*슬릭 슬라이더 테마(화살표, 버튼용)*/

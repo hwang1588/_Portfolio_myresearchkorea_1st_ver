@@ -1,0 +1,81 @@
+$boolean: true;
+/* 변수를 할당 */
+$string: hello;
+$color: red;
+$number: 720;
+$list: red,
+orange,
+yellow,
+green,
+blue;
+$map: (l: light,
+    d: dark,
+);
+$bg_orange: #e96900;
+$bg_green: #0ce900;
+$url-images: "/assets/images/";
+$w: 200px;
+
+//////////////////////////////////////////////////////
+//1. 중첩작성시 '&'이 없으면 하위선택자는 기본적으로 부모선택자를 상속하는 형태가 됨(ex: .father .baby)
+//2. 중첩작성시 '&'을 붙히면 '&'은 부모선택자의 역할을 하게 됨
+//3. '&-요소' 형태를 작성하면 '부모선택자-요소' 형태로 완성됨
+//////////////////////////////////////////////////////
+.father {
+    background-color: blueviolet;
+    .baby {
+        background-color: aqua;
+
+        &.dog {
+            background-color: white;
+        }
+
+        & .dog2 {
+            background-color: $bg_green;
+        }
+
+        &-guess {
+            background-color: $bg_orange;
+        }
+
+        &-guess2 {
+            background-color: red;
+        }
+    }
+}
+//////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////
+//1. @mixin 요소이름 선언 후 스타일작성
+//2. 요소에 @include 요소이름을 선언하면 스타일 생성
+//3. font: {size: 22px;} => font-size: 22px;로 컴파일됨
+//4. &::after => h1::after, div::after로 치환됨
+//////////////////////////////////////////////////////
+@mixin large-text {
+    font: {
+        size: 22px;
+        weight: bold;
+        family: sans-serif;
+    }
+
+    color: orange;
+
+    &::after {
+        content: "!!";
+    }
+
+    span.icon {
+        background: url("/images/icon.png");
+    }
+}
+
+/* 사용 - @include */
+
+h1 {
+    @include large-text;
+}
+
+div {
+    @include large-text;
+}
+//////////////////////////////////////////////////////

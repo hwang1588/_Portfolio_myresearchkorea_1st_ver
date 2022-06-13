@@ -1,0 +1,132 @@
+$boolean: true;
+/* 변수를 할당 */
+$string: hello;
+$color: red;
+$number: 720;
+$list: red,
+orange,
+yellow,
+green,
+blue;
+$map: (l: light,
+    d: dark,
+);
+$bg_orange: #e96900;
+$bg_green: #0ce900;
+$url-images: "/assets/images/";
+$w: 200px;
+
+//////////////////////////////////////////////////////
+//1. 중첩작성시 '&'이 없으면 하위선택자는 기본적으로 부모선택자를 상속하는 형태가 됨(ex: .father .baby)
+//2. 중첩작성시 '&'을 붙히면 '&'은 부모선택자의 역할을 하게 됨
+//3. '&-선택자' 형태를 작성하면 '부모선택자-선택자' 형태로 완성됨
+//////////////////////////////////////////////////////
+.father {
+    background-color: blueviolet;
+
+    .baby {
+        background-color: aqua;
+
+        &.dog {
+            background-color: white;
+        }
+
+        & .dog2 {
+            background-color: $bg_green;
+        }
+
+        &-guess {
+            background-color: $bg_orange;
+        }
+
+        &-guess2 {
+            background-color: red;
+        }
+    }
+}
+
+
+//////////////////////////////////////////////////////
+//1. @mixin 선택자 선언 후 스타일작성
+//2. 선택자 스코프 안에 @include 선택자를 선언하면 @mixin 선택자로 선언한 스타일세트 생성
+//3. font: {size: 22px;} => font-size: 22px;로 컴파일됨
+//4. &::after => h1::after, div::after로 치환됨
+//////////////////////////////////////////////////////
+@mixin large-text {
+    font: {
+        size: 22px;
+        weight: bold;
+        family: sans-serif;
+    }
+
+    color: orange;
+
+    &::after {
+        content: "!!";
+    }
+
+    span.icon {
+        background: url("/images/icon.png");
+    }
+}
+
+h1 {
+    @include large-text;
+}
+
+//////////////////////////////////////////////////////
+//1. 기존 사전정의한 선택자를 다른 선택자의 scope안에 @extend로 로드가능
+//2. %형식으로 정의할경우 해당형식은 css로 컴파일되지 않음.
+//////////////////////////////////////////////////////
+.draft {
+    font-size: 11px;
+}
+
+%draft {
+    font-size: 10px;
+}
+
+.hello {
+    @extend .draft;
+    @extend %draft;
+    color: red;
+}
+
+//////////////////////////////////////////////////////
+//1. @at-root를 이용하면 부모선택자의 상속없이 독립적으로 사용가능
+//////////////////////////////////////////////////////
+.title {
+    color: black;
+
+    @at-root {
+        .main-title {
+            font-size: 24px;
+            margin-top: 90px;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
+//1. for문을 통한 규칙적인 반복문 제작 *보간사용에 유의
+//////////////////////////////////////////////////////
+$total: 4;
+
+@for $i from 1 through $total {
+    .title-#{$i} {
+        font-size: 24px;
+    }
+}
+
+//////////////////////////////////////////////////////
+//1. 중첩사용이 부모선택자의 프로퍼티값을 상속하진 않음
+//////////////////////////////////////////////////////
+.ready {
+    color: #F8F8F8;
+    border: 1px solid #F8F8F8 !important;
+
+    &2 {
+        color: #F8F8F8;
+        border: 1px solid #FF6594 !important;
+        background-color: #FF6594 !important;
+    }
+}
