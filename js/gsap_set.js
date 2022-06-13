@@ -73,18 +73,13 @@ function changeNumber() {
 /////////////////////////////////////////////////
 gsap.to("#id", {
   x: 100,
-  duration: 1,
-  scrollTrigger: {
-    trigger: "#id",
-  },
-});
-gsap.to("#id", {
   y: 50,
   duration: 1,
   scrollTrigger: {
     trigger: "#id",
   },
 });
+
 /////////////////////////////////////////////////
 var $sections = document.querySelectorAll(".horizon_box"); //horizon_box를 변수로 할당
 var sec = gsap.timeline({

@@ -15,3 +15,5 @@
 
 @import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");/*슬릭슬라이더 css*/
 @import "slick-theme.css";/*슬릭 슬라이더 테마(화살표, 버튼용)*/
+
+@import "test.css";
