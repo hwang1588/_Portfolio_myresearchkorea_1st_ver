@@ -1,4 +1,71 @@
+$(function () {
+  $('a').hover(function () {
+    $('.circle').addClass('on').removeClass('off')
+  }, function () {
+    $('.circle').addClass('off').removeClass('on')
+  });
+});
 
+///////////////////////////////////////////////////
+//마우스 이동에 따른 원형
+///////////////////////////////////////////////////
+const circle = document.querySelectorAll(".circle");
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  circle.style.left = mouseX + 'px';
+  circle.style.top = mouseY + 'px';
+});
+
+var $circle = $(".circle"); //변수 할당=특정요소를 지정
+function moveCircle(e) {
+  gsap.to($circle, 0.5, { //숫자가 높으면 커서이동후 원 반응속도 느려짐
+    css: {
+      left: e.pageX,
+      top: e.pageY
+    }
+  });
+}
+$(window).on('mousemove', moveCircle);
+///////////////////////////////////////////////////
+//scrollto를 활용한 헤더 네비게이션 이동 구현
+///////////////////////////////////////////////////
+$('.sec_btn1').click(function () {
+  gsap.to(window, {
+    duration: 0.3,
+    scrollTo: {
+      y: ".sec1",
+      offsetY: 0
+    }
+  });
+});
+$('.sec_btn2').click(function () {
+  gsap.to(window, {
+    duration: 0.3,
+    scrollTo: {
+      y: ".sec2",
+      offsetY: 0
+    }
+  });
+});
+$('.sec_btn3').click(function () {
+  gsap.to(window, {
+    duration: 0.3,
+    scrollTo: {
+      y: ".sec3",
+      offsetY: 0
+    }
+  });
+});
+$('.sec_btn4').click(function () {
+  gsap.to(window, {
+    duration: 0.3,
+    scrollTo: {
+      y: ".sec4",
+      offsetY: 0
+    }
+  });
+});
 ///////////////////////////////////////////////////
 //timeline.to 에서 to를 통해 해당 요소에 명령 입력
 ///////////////////////////////////////////////////

@@ -1,0 +1,279 @@
+@charset "UTF-8";
+html,
+body {
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+section1 {
+  background: yellowgreen;
+}
+section2 {
+  background: goldenrod;
+  overflow: hidden;
+}
+section3 {
+  background: indianred;
+}
+section4 {
+  background: paleturquoise;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.box1 {
+  background: blue;
+}
+.box2 {
+  background: crimson;
+}
+.box3 {
+  background: darkorchid;
+}
+.box h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.horizon_box {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.flex-center {
+  justify-content: center;
+  align-content: center;
+}
+
+.spin {
+  transform: rotate(230deg);
+  margin-left: 500px;
+}
+
+/*svg 스트로크 시작*/
+.text-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg text {
+  font-family: "Staatliches", cursive;
+  font-size: 6em;
+  fill: transparent;
+  stroke-dasharray: 326px;
+  -webkit-animation: stroke 1s linear;
+          animation: stroke 1s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+svg text:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+svg text:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+svg text:nth-child(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+svg text:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+svg text:nth-child(5) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+svg text:nth-child(6) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+svg text:nth-child(7) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+svg text:nth-child(8) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+svg text:nth-child(9) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+svg text:nth-child(10) {
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+svg text:nth-child(11) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+svg text:nth-child(12) {
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+
+@-webkit-keyframes stroke {
+  0% {
+    stroke: #F1C164;
+    stroke-width: 3px;
+    stroke-dashoffset: 326px;
+  }
+  70% {
+    fill: transparent;
+  }
+  98% {
+    stroke: #F1C164;
+    stroke-width: 3px;
+  }
+  100% {
+    fill: #F1C164;
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    stroke: #F1C164;
+    stroke-width: 3px;
+    stroke-dashoffset: 326px;
+  }
+  70% {
+    fill: transparent;
+  }
+  98% {
+    stroke: #F1C164;
+    stroke-width: 3px;
+  }
+  100% {
+    fill: #F1C164;
+    stroke-dashoffset: 0px;
+  }
+}
+/*마우스커서용*/
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  z-index: 99999;
+  pointer-events: none;
+  transform: rotate(45deg);
+}
+.circle.on {
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.circle.off {
+  -webkit-animation-name: slideout;
+          animation-name: slideout;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slidein {
+  100% {
+    border: 1px solid rebeccapurple;
+    background-color: rebeccapurple;
+    transform: rotate(135deg);
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@keyframes slidein {
+  100% {
+    border: 1px solid rebeccapurple;
+    background-color: rebeccapurple;
+    transform: rotate(135deg);
+    width: 35px;
+    height: 35px;
+  }
+}
+@-webkit-keyframes slideout {
+  0% {
+    border: 1px solid rebeccapurple;
+    background-color: rebeccapurple;
+    transform: rotate(135deg);
+    width: 35px;
+    height: 35px;
+  }
+  100% {
+    border: 1px solid #fff;
+    background-color: transparent;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+  }
+}
+@keyframes slideout {
+  0% {
+    border: 1px solid rebeccapurple;
+    background-color: rebeccapurple;
+    transform: rotate(135deg);
+    width: 35px;
+    height: 35px;
+  }
+  100% {
+    border: 1px solid #fff;
+    background-color: transparent;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+  }
+}
+.c-go-top {
+  /*	background: none repeat scroll 0 0 padding-box #ffffff;*/
+  /*	border: 1px solid #1099dd;*/
+  background: linear-gradient(229deg, rgba(255, 0, 165, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(84deg, rgba(163, 0, 150, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(343deg, rgb(106, 45, 255), rgba(0, 0, 255, 0) 70.71%);
+  bottom: 30px;
+  border-radius: 4px;
+  color: #333333;
+  display: none;
+  font-size: 12px;
+  opacity: 1;
+  padding: 7px 10px;
+  position: fixed;
+  right: 2%;
+  text-decoration: none;
+  z-index: 999;
+  color: #ffffff !important;
+}
+
+.c-go-top:hover,
+.c-go-top:focus,
+.c-go-top:active,
+.c-go-top:visited {
+  color: #fff;
+  outline: 0;
+  text-decoration: none;
+  background-color: darkcyan;
+}/*# sourceMappingURL=compile.css.map */
