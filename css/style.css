@@ -6,7 +6,6 @@
 @import "font.css";/*폰트*/
 @import "compile.css";/*공통(전체)스타일시트*/
 @import "clip.css";/*background-clip용 스타일시트*/
-@import "snow.css";/*background-clip용 스타일시트*/
 
 /*구형animate.css= .bounceInUp*/
 @import "animate.css";/*애니메이션css*/

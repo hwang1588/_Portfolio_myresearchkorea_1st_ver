@@ -1,14 +1,40 @@
-$(function () {
-  $('a').hover(function () {
-    $('.circle').addClass('on').removeClass('off')
-  }, function () {
-    $('.circle').addClass('off').removeClass('on')
-  });
-});
+///////////////////////////////////////////////////
+//로딩화면용
+///////////////////////////////////////////////////
+ window.setTimeout(function() {
+  $("#loading-wrapper2").fadeOut(1000); //요소를 2000ms동안 fadeout으로 안보이게함
+  $(".ready").addClass("aaa bbb"); //지정요소에 요소들을 추가함
+}, 4000); //작동하기전 4000ms의 딜레이를 추가한다
+
+window.setTimeout(function() {
+  $("body").removeClass("position-fixed");
+}, 6000); //6초 지연을 통해 body에 fixed상태를 해제한다(화면 로딩중 스크롤방지)
+
+window.setTimeout(function() {
+  $(".drama").addClass("est"); //요소에 요소를 추가함
+}, 1000); //동하기전 1000ms의 딜레이를 추가한다
 
 ///////////////////////////////////////////////////
-//마우스 이동에 따른 원형
+//마우스 이동에 따른 원형 및 호버 액션
 ///////////////////////////////////////////////////
+const circletwo = document.querySelectorAll(".circle2");
+document.addEventListener("mousemove", (e) => {
+  const mouseXtwo = e.clientX;
+  const mouseYtwo = e.clientY;
+  circletwo.style.left = mouseXtwo + 'px';
+  circletwo.style.top = mouseYtwo + 'px';
+});
+var $circletwo = $(".circle2"); //변수 할당=특정요소를 지정
+function moveCircletwo(e) {
+  gsap.to($circletwo, 0.5, { //숫자가 높으면 커서이동후 원 반응속도 느려짐
+    css: {
+      left: e.pageX,
+      top: e.pageY
+    }
+  });
+}
+$(window).on('mousemove', moveCircletwo);
+
 const circle = document.querySelectorAll(".circle");
 document.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
@@ -27,6 +53,14 @@ function moveCircle(e) {
   });
 }
 $(window).on('mousemove', moveCircle);
+
+$(function () {
+  $('a').hover(function () {
+    $('.circle').addClass('on').removeClass('off')
+  }, function () {
+    $('.circle').addClass('off').removeClass('on')
+  });
+});
 ///////////////////////////////////////////////////
 //scrollto를 활용한 헤더 네비게이션 이동 구현
 ///////////////////////////////////////////////////
@@ -75,7 +109,7 @@ gsap.to("#pintest", {
     pin: "#pintest", //true,false로 핀 유무 결정, 요소로 입력시 해당 요소가 고정됨
     start: "600 center", //요소 트리거위치, 뷰포트 트리거 위치
     end: "+=3000", //트리거가 끝날때까지의 길이(px)
-    markers: true,
+    // markers: true,
   },
 });
 ///////////////////////////////////////////////////
