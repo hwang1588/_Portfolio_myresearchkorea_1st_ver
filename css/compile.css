@@ -1,4 +1,7 @@
-@charset "UTF-8";
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
   font-family: "NanumSquare", "Nanum Gothic", "Roboto", sans-serif;
@@ -54,7 +57,6 @@ body::-webkit-scrollbar-thumb {
   margin-left: 500px;
 }
 
-/*svg 스트로크 시작*/
 .text-box {
   width: 100%;
   height: 100%;
@@ -192,7 +194,6 @@ svg text:nth-child(20) {
     stroke-width: 3px;
   }
 }
-/*마우스커서용*/
 .circle {
   position: absolute;
   width: 20px;
@@ -277,8 +278,6 @@ svg text:nth-child(20) {
   }
 }
 .c-go-top {
-  /*	background: none repeat scroll 0 0 padding-box #ffffff;*/
-  /*	border: 1px solid #1099dd;*/
   background: linear-gradient(229deg, rgba(119, 107, 255, 0.8), rgba(255, 0, 0, 0) 90.71%), linear-gradient(84deg, rgba(52, 102, 255, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(343deg, rgb(26, 121, 255), rgba(0, 0, 255, 0) 70.71%);
   bottom: 30px;
   border-radius: 4px;
@@ -362,4 +361,21 @@ svg text:nth-child(20) {
   height: 100vh;
   width: 100vw;
   z-index: 9999;
-}/*# sourceMappingURL=compile.css.map */
+}
+
+.nav-link:hover {
+  color: #a400e0 !important;
+  font-weight: bolder;
+  -webkit-animation-name: upper;
+          animation-name: upper;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes upper {}
+
+@keyframes upper {}/*# sourceMappingURL=compile.css.map */
