@@ -16,11 +16,7 @@
 ## Preview
 
 ### - PC
-<img src="https://github.com/hwang1588/repo_img_src/blob/main/_korfin_bloom_3rd_ver/pc1.png">
-<img src="https://github.com/hwang1588/repo_img_src/blob/main/_korfin_bloom_3rd_ver/pc2.png">
-<img src="https://github.com/hwang1588/repo_img_src/blob/main/_korfin_bloom_3rd_ver/pc3.png">
-<img src="https://github.com/hwang1588/repo_img_src/blob/main/_korfin_bloom_3rd_ver/pc4.png">
-<img src="https://github.com/hwang1588/repo_img_src/blob/main/_korfin_bloom_3rd_ver/pc5.png">
+<img src="https://github.com/hwang1588/repo_img_src/blob/main/_portfolio_myresearchkorea_1st_ver/pc1.png">
 
 ### - MOBILE
-N/A
+<img src="https://github.com/hwang1588/repo_img_src/blob/main/_portfolio_myresearchkorea_1st_ver/mobile1.png">
