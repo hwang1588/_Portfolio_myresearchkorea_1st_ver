@@ -2,6 +2,14 @@ html {
   overflow-x: hidden;
 }
 
+.font-heritage {
+  font-family: "Tai Heritage Pro", serif;
+}
+
+.font-ptserif {
+  font-family: "PT Serif", serif;
+}
+
 body {
   overflow-x: hidden;
   font-family: "NanumSquare", "Nanum Gothic", "Roboto", sans-serif;
@@ -349,6 +357,10 @@ svg text:nth-child(20) {
 
 .w-62 {
   width: 62%;
+}
+
+.w-88 {
+  width: 88%;
 }
 
 .w-89 {

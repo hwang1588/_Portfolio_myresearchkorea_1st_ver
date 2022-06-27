@@ -5,11 +5,11 @@
  window.setTimeout(function() {
   $("#loading-wrapper2").fadeOut(1000); //요소를 2000ms동안 fadeout으로 안보이게함
   $(".ready").addClass("aaa bbb"); //지정요소에 요소들을 추가함
-}, 4000); //작동하기전 4000ms의 딜레이를 추가한다
+}, 3600); //작동하기전 4000ms의 딜레이를 추가한다
 
 window.setTimeout(function() {
   $("body").removeClass("position-fixed");
-}, 6000); //6초 지연을 통해 body에 fixed상태를 해제한다(화면 로딩중 스크롤방지)
+}, 4000); //6초 지연을 통해 body에 fixed상태를 해제한다(화면 로딩중 스크롤방지)
 
 window.setTimeout(function() {
   $(".drama").addClass("est"); //요소에 요소를 추가함
